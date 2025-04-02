@@ -8,6 +8,9 @@ postinstall = "pip install --no-build-isolation --no-deps --disable-pip-version-
 
 [dependencies]
 python = ">=3.13"
+textual = ">=3.0.0,<4"
+textual-dev = ">=1.7.0,<2"
+polars = ">=1.26.0,<2"
 
 [host-dependencies]
 pip = "*"

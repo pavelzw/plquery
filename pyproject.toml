@@ -24,6 +24,7 @@ repository = "https://github.com/pavelzw/plq"
 include = ["plq"]
 
 [project.scripts]
+plq = "plq.__main__:main"
 
 [tool.ruff]
 line-length = 88
