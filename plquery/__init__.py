@@ -1,12 +1,17 @@
+import importlib.metadata
 import pathlib
-import sys
+import warnings
 
 import polars as pl
 from textual.app import App, ComposeResult
 from textual.containers import VerticalScroll
 from textual.widgets import Input, Markdown
 
-pl.Config.set_tbl_formatting("MARKDOWN")
+try:
+    __version__ = importlib.metadata.version(__name__)
+except importlib.metadata.PackageNotFoundError as e:  # pragma: no cover
+    warnings.warn(f"Could not determine version of {__name__}\n{e!s}", stacklevel=2)
+    __version__ = "unknown"
 
 
 def read_df(path: pathlib.Path) -> pl.DataFrame:
@@ -19,7 +24,11 @@ def read_df(path: pathlib.Path) -> pl.DataFrame:
     return df
 
 
-class PlqApp(App):
+class PlqueryApp(App):
+    def __init__(self, df: pl.DataFrame):
+        self.df = df
+        super().__init__()
+
     def compose(self) -> ComposeResult:
         yield Input(placeholder='df.select(pl.col("..."))', id="input-query")
         with VerticalScroll(id="results-container"):
@@ -27,18 +36,8 @@ class PlqApp(App):
 
     def on_input_submitted(self, message: Input.Submitted) -> None:
         try:
+            df = self.df  # noqa: F841, used in `eval`
             res = eval(message.value)
             self.query_one("#results", Markdown).update(str(res))
         except Exception as e:
             self.query_one("#results", Markdown).update(str(e))
-
-
-def main():
-    global df
-    df = read_df(pathlib.Path(sys.argv[1]))
-    app = PlqApp()
-    app.run()
-
-
-if __name__ == "__main__":
-    main()
