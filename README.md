@@ -24,12 +24,23 @@ This tui allows you to query polars dataframes interactively by running polars e
 
 ## 💿 Installation
 
+You can install `plquery` from conda-forge or PyPi.
+Once installed, you can run the `plquery` (or equivalently: `plq`) binary.
+
+```bash
+plquery my-df.parquet
+# or
+plq my-df.parquet
+```
+
 ### conda-forge
 
 ```bash
 pixi global install plquery
 # or to run it in a temporary environment
 pixi exec plquery my-df.parquet
+# or
+pixi exec plq my-df.parquet
 ```
 
 ### PyPi
