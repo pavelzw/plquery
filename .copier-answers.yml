@@ -4,9 +4,9 @@ _src_path: https://github.com/quantco/copier-template-python-open-source
 add_autobump_workflow: true
 author_email: pavelzw@gmail.com
 author_name: Pavel Zwerschke
-github_url: https://github.com/pavelzw/plq
+github_url: https://github.com/pavelzw/plquery
 github_user: pavelzw
 minimal_python_version: py313
 project_short_description: Query dataframes interactively
-project_slug: plq
+project_slug: plquery
 use_devcontainer: true

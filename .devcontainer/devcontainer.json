@@ -1,5 +1,5 @@
 {
-    "name": "plq",
+    "name": "plquery",
     "build": {
       "dockerfile": "Dockerfile",
       "context": "..",

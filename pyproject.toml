@@ -1,30 +1,27 @@
 [build-system]
-requires = ["setuptools", "setuptools-scm", "wheel"]
-
-[tool.setuptools_scm]
-version_scheme = "post-release"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
-name = "plq"
+name = "plquery"
 description = "Query dataframes interactively"
 authors = [{ name = "Pavel Zwerschke", email = "pavelzw@gmail.com" }]
-dynamic = ["version"]
+version = "0.0.1"
+license = { file = "LICENSE" }
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.13",
 ]
 requires-python = ">=3.13"
 readme = "README.md"
-dependencies = []
+dependencies = ["textual >=3.0.0,<4", "polars >=1.26.0,<2"]
 
 [project.urls]
-repository = "https://github.com/pavelzw/plq"
-
-[tool.setuptools.packages.find]
-include = ["plq"]
+repository = "https://github.com/pavelzw/plquery"
 
 [project.scripts]
-plq = "plq.__main__:main"
+plq = "plquery.__main__:main"
+plquery = "plquery.__main__:main"
 
 [tool.ruff]
 line-length = 88
