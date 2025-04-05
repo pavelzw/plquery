@@ -20,10 +20,15 @@ hatchling = "*"
 pytest = ">=6"
 pytest-cov = "*"
 mypy = "*"
-textual-dev = ">=1.7.0,<2"
 [feature.test.tasks]
 test = "pytest"
 test-coverage = "pytest --cov=plquery --cov-report=xml --cov-report=term-missing"
+
+[feature.dev.dependencies]
+textual-dev = ">=1.7.0,<2"
+vhs = "*"
+[feature.dev.tasks]
+demo = "vhs .github/assets/demo/demo-light.tape && vhs .github/assets/demo/demo-dark.tape"
 
 [feature.build.dependencies]
 python-build = "*"
@@ -50,7 +55,7 @@ pre-commit-run = "pre-commit run -a"
 python = "3.13.*"
 
 [environments]
-default = ["test"]
+default = ["test", "dev"]
 py313 = ["py313", "test"]
 build = ["build"]
 lint = { features = ["lint"], no-default-feature = true }
