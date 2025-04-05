@@ -17,7 +17,10 @@
 [pypi-badge]: https://img.shields.io/pypi/v/plquery.svg?style=flat-square&logo=pypi&logoColor=white
 [python-version-badge]: https://img.shields.io/pypi/pyversions/plquery?style=flat-square&logoColor=white&logo=python
 
-This tui allows you to query polars dataframes interactively by running polars expressions on parquet and CSV files from your system.
+This tui allows you to query polars dataframes interactively by running polars expressions on parquet and CSV files from your system using [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
+
+![plquery demo](.github/assets/demo/demo-light.gif#gh-light-mode-only)
+![plquery demo](.github/assets/demo/demo-dark.gif#gh-dark-mode-only)
 
 ## 💿 Installation
 
