@@ -1,9 +1,9 @@
 # plquery: query dataframes interactively
 
-[![CI](https://img.shields.io/github/actions/workflow/status/pavelzw/plquery/ci.yml?style=flat-square&branch=main)](https://github.com/pavelzw/plq/actions/workflows/ci.yml)
-[![conda-forge](https://img.shields.io/conda/vn/conda-forge/plquery?logoColor=white&logo=conda-forge&style=flat-square)](https://prefix.dev/channels/conda-forge/packages/plq)
-[![pypi-version](https://img.shields.io/pypi/v/plquery.svg?logo=pypi&logoColor=white&style=flat-square)](https://pypi.org/project/plq)
-[![python-version](https://img.shields.io/pypi/pyversions/plquery?logoColor=white&logo=python&style=flat-square)](https://pypi.org/project/plq)
+[![CI](https://img.shields.io/github/actions/workflow/status/pavelzw/plquery/ci.yml?style=flat-square&branch=main)](https://github.com/pavelzw/plquery/actions/workflows/ci.yml)
+[![conda-forge](https://img.shields.io/conda/vn/conda-forge/plquery?logoColor=white&logo=conda-forge&style=flat-square)](https://prefix.dev/channels/conda-forge/packages/plquery)
+[![pypi-version](https://img.shields.io/pypi/v/plquery.svg?logo=pypi&logoColor=white&style=flat-square)](https://pypi.org/project/plquery)
+[![python-version](https://img.shields.io/pypi/pyversions/plquery?logoColor=white&logo=python&style=flat-square)](https://pypi.org/project/plquery)
 
 This tui allows you to query polars dataframes interactively by running polars expressions on parquet and CSV files from your system.
 
